@@ -1,5 +1,5 @@
 #pull a basic centos image
-FROM centos
+FROM ubuntu:14.04
 
 #MAINTAINER
 MAINTAINER spoonwep <i@sell.moe>
@@ -11,8 +11,8 @@ ENV TZ "Asia/Shanghai"
 ENV HOME /root
 
 #install all dependencies
-RUN yum -y update
-RUN yum -y install git python-pip m2crypto python-setuptools
+RUN apt-get -y update
+RUN apt-get -y install git python-pip m2crypto python-setuptools
 RUN easy_install pip
 RUN pip install cymysql
 RUN easy_install supervisor
