@@ -13,8 +13,7 @@ ENV HOME /root
 #install all dependencies
 RUN yum -y update
 RUN yum -y install git python-pip m2crypto
-RUN curl https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py | python -
-RUN curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python -
+RUN easy_install pip
 RUN pip install cymysql
 RUN easy_install supervisor
 
