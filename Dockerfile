@@ -17,14 +17,14 @@ RUN easy_install pip
 RUN pip install cymysql
 RUN easy_install supervisor
 
-#clone shadowsocks-namyuser
+#clone shadowsocks-namyuser and add the config file
 RUN git clone https://github.com/spoonwep/shadowsocks.git
-COPY Config.py /root/shadowsocks/Config.py
-COPY supervisord.conf /etc/supervisord.conf
-RUN mkdir -p /etc/supervisor.conf.d && \
-    mkdir -p /var/log/supervisor
+ADD ./Config.py /root/shadowsocks/Config.py
 
-ADD start.sh /start.sh
+#Supervisor Config
+ADD ./supervisord.conf /etc/supervisord.conf
+
+ADD ./start.sh /start.sh
 RUN chmod 755 /start.sh
 
 ENTRYPOINT ["/start.sh"]
