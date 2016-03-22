@@ -1,5 +1,5 @@
 #pull a basic centos image
-FROM centos:centos7.1.1503
+FROM centos
 
 #MAINTAINER
 MAINTAINER spoonwep <i@sell.moe>
