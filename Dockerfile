@@ -24,4 +24,7 @@ COPY supervisord.conf /etc/supervisord.conf
 RUN mkdir -p /etc/supervisor.conf.d && \
     mkdir -p /var/log/supervisor
 
+ADD start.sh /start.sh
+RUN chmod 755 /start.sh
+
 ENTRYPOINT ["/start.sh"]
