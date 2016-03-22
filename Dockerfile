@@ -12,7 +12,7 @@ ENV HOME /root
 
 #install all dependencies
 RUN yum -y update
-RUN yum -y install git python-pip m2crypto
+RUN yum -y install git python-pip m2crypto python-setuptools
 RUN easy_install pip
 RUN pip install cymysql
 RUN easy_install supervisor
