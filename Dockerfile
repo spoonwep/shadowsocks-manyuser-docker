@@ -22,10 +22,10 @@ ADD ./Config.py /shadowsocks/Config.py
 ADD ./supervisord.conf /etc/supervisord.conf
 
 #add start script
-ADD ./start.sh /start.sh
-RUN chmod 755 /start.sh
+ADD ./start.sh /root/start.sh
+RUN chmod 755 /root/start.sh
 
 #expose all ports that shadowsocks-manyuser will use
 EXPOSE 30000-65535
 
-CMD ["/bin/bash", "/start.sh"]
+CMD ["/bin/bash", "/root/start.sh"]
