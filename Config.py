@@ -1,12 +1,11 @@
 #Config
-MYSQL_HOST = ''
-MYSQL_PORT = 3306
-MYSQL_USER = ''
-MYSQL_PASS = ''
-MYSQL_DB = ''
+MYSQL_HOST = 'YOUR-HOST'
+MYSQL_PORT = YOUR-DATABASE-PORT
+MYSQL_USER = 'YOUR-DATABASE-USERNAME'
+MYSQL_PASS = 'YOUR-DATABASE-PASSWORD'
+MYSQL_DB = 'YOUR-DATABASE-NAME'
 
+# You can ignore settings below
 MANAGE_PASS = 'shadowsocks2333'
-#if you want manage in other server you should set this value to global ip
 MANAGE_BIND_IP = '127.0.0.1'
-#make sure this port is idle
 MANAGE_PORT = 23333
