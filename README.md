@@ -28,7 +28,7 @@ $ docker build -t spoonwep/shadowsocks-manyuser-docker
 $ docker pull spoonwep/shadowsocks-manyuser-docker
 ```
 
-2.Create a file called `Config.py`,the content of this file could be found HERE
+2.Create a file called `Config.py`,the content of this file could be found [HERE](https://github.com/spoonwep/shadowsocks-manyuser-docker/blob/master/Config.py)
 
 3.Run a container:
 ```
